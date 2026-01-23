@@ -46,6 +46,8 @@ fi
 
 unix_user=$(whoami)
 
+sudo -v || exit 1
+
 # uid is needed to correctly setup file permissions and allow the current user to edit the remote files
 gum spin --title="Mounting $share_pick to $smb_mount_path..." \
     -- sudo mount --mkdir -t cifs "//$server_ip/$share_pick" "$smb_mount_path" \
