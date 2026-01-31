@@ -24,8 +24,8 @@ function set_kb_layout() {
 
     # To understand the 0, 1, 2 values, see hyprland.conf
     case $layout in
-        "us"        | "English (US)")       hyprctl switchxkblayout "$keyboard" 1 ;;
-        "ergol"     | "French (Ergo-L)")    hyprctl switchxkblayout "$keyboard" 0 ;;
+        "us"        | "English (US)")       hyprctl switchxkblayout "$keyboard" 0 ;;
+        "ergol"     | "French (Ergo-L)")    hyprctl switchxkblayout "$keyboard" 1 ;;
         # "fr"        | "French")             hyprctl switchxkblayout "$keyboard" 1 ;;
         # "ergol-us"  | "Ergo-L (US)")    hyprctl switchxkblayout "$keyboard" 2 ;;
         *) echo "hyprkeyb: unknown keyboard layout: $layout" >&2; exit 1 ;;

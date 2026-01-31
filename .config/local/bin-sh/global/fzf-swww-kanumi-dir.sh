@@ -4,7 +4,7 @@ SWWW_ANIM="random"
 
 pick=$(kanumi list | rev | cut -d'/' -f2- | rev | sort -u \
     | fzf-rofi.sh --prompt='Directory> ' \
-    --preview-window 'right:50%:wrap' --preview='fzf-img-dir-preview.sh {}' \
+    --preview-window 'right:60%:wrap' --preview='fzf-img-dir-preview.sh {}' \
     --delimiter='/' --with-nth=6..)
 [[ -z "$pick" ]] && exit 1
 
