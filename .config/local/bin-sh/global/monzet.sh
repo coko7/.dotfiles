@@ -19,13 +19,11 @@ pick=$(find "$SETUPS_DIR" -type f -printf "%f\n" | fzf-rofi.sh \
     --preview-window 'right:70%' --height=100% \
     --preview="bat $SETUPS_DIR/{} --language toml --color=always --style=plain")
 
-if [ -z "$pick" ]; then
-    exit 1
-fi
+[[ -z "$pick" ]] && exit 1
 
 if gum confirm "Are you sure you want to switch to $pick?" --default=true; then
     target_mon_file="$SETUPS_DIR/$pick"
-    ln -vsf "$target_mon_file" "$MON_SYM_LNK"
+    ln --verbose --symbolic --force "$target_mon_file" "$MON_SYM_LNK"
 
     if [ -n "$HYPRLAND_INSTANCE_SIGNATURE" ]; then
         hyprctl reload

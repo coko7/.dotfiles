@@ -82,6 +82,9 @@ vnoremap > >gv
 "" Leader commands
 "" ========================================================
 
+" Toggle breakpoint
+map <leader>b <action>(ToggleLineBreakpoint)
+
 " Comment lines
 " map <leader>c <action>(CommentByLineComment)
 
@@ -170,8 +173,17 @@ map <leader>s/ <Action>(FindInPath)
 let g:WhichKeyDesc_file_nav_goto_file = "<leader>sf [S]earch [F]iles"
 map <leader>sf <Action>(GotoFile)
 
+let g:WhichKeyDesc_file_nav_search_diagnostics = "<leader>sd [S]earch [D]iagnostics"
+nmap <leader>sd <Action>(ActivateProblemsViewToolWindow)
+
+let g:WhichKeyDesc_file_nav_search_grep = "<leader>sg [S]earch by [G]rep"
+nmap <leader>sg <Action>(FindInPath)
+
 let g:WhichKeyDesc_file_show_help = "<leader>sh [S]earch [H]elp"
 map <leader>sh <Action>(HelpMenu)
+
+"let g:WhichKeyDesc_file_nav_show_harpoon = "<leader>sk [S]how [K]harpoon"
+"map <leader>sk <Action>(ShowHarpoon)
 
 " map <leader>fl          <Action>(RecentLocations)
 " map <leader>fs          <Action>(NewScratchFile)
