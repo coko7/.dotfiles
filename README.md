@@ -6,7 +6,7 @@ All of my Linux configuration files.
 
 ## 🐧 System setup
 
-- Disto: [Arch Linux](https://archlinux.org/)
+- Distro: [Arch Linux](https://archlinux.org/)
 - Display server: [Wayland](https://wayland.freedesktop.org/)
 - Window manager: [Hyprland](https://hyprland.org/) (also works as the Compositor)
 - System/status bar: [Waybar](https://github.com/Alexays/Waybar)
